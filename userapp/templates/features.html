@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titles %}{% endblock %}
+{% block styles %}
+<style>
+    body{
+        background-image: linear-gradient(rgb(4, 251, 239), rgb(100, 231, 1));
+    }
+    img{
+        height: 400px;
+        width:300px;
+        margin-left:75%;
+    }
+    #p1{
+        margin-bottom:100px;
+        position: absolute;
+        top: 150px;
+    }
+    #p2{
+        margin-bottom: 85px;
+        position: absolute;
+        top:250px;
+    }
+</style>
+
+{% endblock %}
+{% block container %}
+<h1>Features</h1>
+<img src="{% static 'images/images.jpg' %}">
+
+<p id="p1">&nbsp;&nbsp;&nbsp;Improves indigestion. There are a lot of people who consume soft drinks after having their food. ...<br>
+Helps in improving your upset stomach.<br> Drinking carbonated soft drinks can make you feel better in nausea. ...
+Increases the energy. ...
+Uplift a person's mind.</p>
+<p id="p2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While drinking soda may seem like a novelty treat, there are many other reasons why you should be stocking up on the fizzy stuff.<br> There’s nothing better than a cold soda on a hot day or at the end of a long shift at work –<br> and the good news is, that there are several benefits that these drinks can provide.<br>
+It’s a well-known fact that soda drinks can be high in calories and sugar,<br> but that doesn’t necessarily mean that you shouldn’t drink them –<br> especially when consumed in moderation Just take a look at just some of the benefits below:</p>
+{% endblock %}

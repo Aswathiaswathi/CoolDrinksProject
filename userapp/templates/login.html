@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titles %}{% endblock %}
+{% block styles %}
+<style>
+    body{
+        background-image: linear-gradient(rgb(4, 251, 239), rgb(100, 231, 1));
+        background-image: url("{% static 'images/blue-mojito.jpg' %}");
+    }
+    form{
+        border:2px solid white ;
+        width: 400px;
+        padding: 50px;
+        background-color: rgb(124, 246, 250);
+        float: right;
+        margin: 15px;
+    }
+    input{
+        width: 90%;
+        height:40px;
+        margin: 0;
+    }
+
+</style>
+
+{% endblock %}
+{% block container %}
+<h1> Login to my account </h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <p> Enter your e-mail and password:</p>
+    <input type="text" placeholder="Email" name="email"><br><br>
+    <input type="password" placeholder="Password" name="password"><br><br>
+    <input type="submit" placeholder="Login" value="Login" style="background-color: rgb(4, 162, 15); color: white;";><br>
+    <p>New customer?<a href="create"> Create your account</a></p>
+    <p>Lost password?<a href="#">Recover password</a></p>
+</form>
+
+
+
+{% endblock %}
+

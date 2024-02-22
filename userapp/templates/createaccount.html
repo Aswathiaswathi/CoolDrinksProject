@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titles %}CreateAccount|CoolDrinks{% endblock %}
+{% block styles %}
+<style>
+   hr{
+    width: 250px;
+   }
+   form{
+    border: 2px solid rgba(205, 75, 66, 0.954);
+    width: 350px; height: 450px;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 70%;
+    background-color: white;
+   }
+   h1{
+    text-align: center;
+    color: rgb(100, 231, 1);
+    
+   }
+   input:not(.bt){
+ 
+    width: 70%;
+    margin: auto;
+    border: none;
+    border-bottom: 2px solid black;
+    display: block;
+    background-image: linear-gradient(rgba(210, 242, 0, 0.734), rgb(100, 231, 1));
+   }
+   .bt{
+    margin: auto;
+    display: block;
+    background-color:  rgb(100, 231, 1);
+    width: 150px; height: 40px;color: white;
+   }
+   p{
+    text-align: center;
+    color: white;
+   }
+   body{
+    background-image: url("{% static 'images/moji.jpg' %}");
+    }
+   
+</style>
+{% endblock %}
+{% block container %}
+<form method="POST">
+{% csrf_token %}
+    <h1> Sign Up</h1><br><br>
+    <input type="text" placeholder="First Name" name="FN"><br>
+ 
+    <input type="text" placeholder="Last Name" name="LM"><br>
+   
+    <input type="email" placeholder="Email" name="EM"><br>
+
+    <input type="password" placeholder="Password" id="ps" name="PSW"><br>
+
+    <p> Already a member?<b>Log In</b></p>
+    <input type="submit" value="Sign up" class="bt">
+ 
+
+</form>
+{% endblock %}

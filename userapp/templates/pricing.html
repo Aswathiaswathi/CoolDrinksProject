@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titles %}{% endblock %}
+{% block styles %}
+<style>
+    body{
+        background-image: linear-gradient(rgb(4, 251, 239), rgb(100, 231, 1));
+    }
+</style>
+
+{% endblock %}
+
+{% block container %}
+<h1>ADD A New Item></h1>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {% for i in updr %}
+        <tr>
+            <th>{{i.label}}</th>
+            <td>{{i}}</td>
+        </tr>
+        
+        {% endfor %}
+    </table>
+    <a><input type="submit" value="Upload"></a>
+</form>
+{% endblock %}

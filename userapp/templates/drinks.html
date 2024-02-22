@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titles %}{% endblock %}
+{% block styles %}
+<style>
+    body{
+        background-image: linear-gradient(rgb(4, 251, 239), rgb(100, 231, 1));
+    }
+</style>
+
+{% endblock %}
+
+{% block container %}
+<h1>Soft & Cool </h1>
+<h3>Soft Drinks &nbsp;&nbsp;&nbsp;&nbsp;juice & shakes&nbsp;&nbsp;&nbsp;Majitos</h3>
+{% for a in data %}
+<div class="card" style="width: 18rem;" id="cards">
+    <img src="{{ a.image.url }}" class="card-img-top" alt="image of book">
+    <div class="card-body">
+        <h4 class="card-title h5c">{{a.Drinks}}</h4>
+        <h6 class="h5c">{{a.qty}}</h6>
+        <h5>class="card-title h5c">{{a.price}}</h5>
+        <p class="card-text">{{a.Description}}</p>
+        <input type="button" value="Order Now">
+    </div>
+  </div>
+
+  return HttpResponse("""something went wrong.please reload webpage by clicking <a href="{{url:'uploadbooks'}}"> reload</a>""") 
+  return render(request,"UploadBooks.html",{'upbk':upload})

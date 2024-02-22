@@ -1,0 +1,24 @@
+body{
+   background-color: black;
+    height: 1000px;
+
+}
+#na1{
+    background-color:   rgb(100, 231, 1);
+    color: black;
+}
+footer{
+    background-color: rgb(100, 231, 1);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+     display: block;
+     overflow: auto;
+     width: 100%;
+     
+}
+#div2{
+    
+    margin-left: 200px;
+}
